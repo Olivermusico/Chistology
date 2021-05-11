@@ -15,6 +15,4 @@ async function getJoke() {
     })
     const data = await response.json();
     console.log(data);
-
-
 }
