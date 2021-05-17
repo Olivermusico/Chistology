@@ -54,16 +54,33 @@ async function getTemps(apiUrlTemps) {
     document.getElementById("temps").innerHTML = `Avui a ${data.name}: ${data.weather[0].description}`
 }
 
-/* Api jokes */
-const apiUrlChistes = 'https://icanhazdadjoke.com/';
+/* Chistes */
+const apiUrlChistes1 = 'https://icanhazdadjoke.com/';
+const apiUrlChistes2 = 'https://api.chucknorris.io/jokes/random';
+const apiUrlChistes3 = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist,explicit&type=single'
+
 
 function nextChiste() {
-    getJoke();
+    var n = Math.floor(Math.random() * 3);
+    switch (n) {
+        case 0:
+            getJoke1();
+            break;
+        case 1:
+            getJoke2();
+            break;
+        case 2:
+            getJoke3();
+            break;
+        default:
+            break;
+    }
+
 }
+/* api jokes1 */
+async function getJoke1() {
 
-async function getJoke() {
-
-    const response = await fetch(apiUrlChistes, {
+    const response = await fetch(apiUrlChistes1, {
         method: 'GET',
 
         headers: {
@@ -72,5 +89,25 @@ async function getJoke() {
     })
     const data = await response.json();
     console.log(data);
-    document.getElementById("chiste").innerHTML = data.joke
+    document.getElementById("chiste").innerHTML = data.joke;
+}
+/* api jokes chuck */
+async function getJoke2() {
+
+    const response = await fetch(apiUrlChistes2, {
+        method: 'GET'
+    })
+    const data = await response.json();
+    console.log(data);
+    document.getElementById("chiste").innerHTML = data.value;
+}
+/* api jokes3 */
+async function getJoke3() {
+
+    const response = await fetch(apiUrlChistes3, {
+        method: 'GET'
+    })
+    const data = await response.json();
+    console.log(data);
+    document.getElementById("chiste").innerHTML = data.joke;
 }

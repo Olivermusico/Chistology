@@ -12,7 +12,10 @@
    }
    
    #temps {
-       font-size: 2rem;
+       font-size: 1rem;
+       background-color: rgba(0, 0, 0, 0.425);
+       padding: 10px;
+       border-radius: 10px;
    }
    
    body {
