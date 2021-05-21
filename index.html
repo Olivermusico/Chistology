@@ -9,16 +9,35 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@700&display=swap" rel="stylesheet">
     <title>Chistology</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="display-1">Chistology</h1>
-        <button type="button" id="nextChiste" onclick="nextChiste()" class="btn btn-warning btn-lg">Següent acudit!</button>
 
+    <div class="d-flex justify-content-start p-2">
+        <p id="temps" class="lead text-white"></p>
+    </div>
+    <div class="container rounded">
+        <h1 class="display-1 text-center bg-danger bg-gradient text-white">Chistology</h1>
+        <!--   <button type="button" id="nextChiste" onclick="nextChiste()" class="btn btn-warning btn-lg">Següent acudit!</button> -->
     </div>
 
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Un acudit per a tu...</h1>
+            <p class="lead">si apretes el botó!</p>
+            <hr class="my-2">
+            <p class="lead" id="chiste"></p>
+            <p class="lead">
+                <a class="btn btn-warning btn-lg" onclick="nextChiste()" role="button">Següent acudit!</a>
+            </p>
+        </div>
+    </div>
 
 
 

@@ -1,0 +1,32 @@
+   .display-1 {
+       font-family: 'Grandstander', cursive;
+       opacity: 0.8;
+   }
+   
+   .display-3 {
+       font-size: 4rem;
+   }
+   
+   #chiste {
+       font-size: 2rem;
+   }
+   
+   #temps {
+       font-size: 1rem;
+       background-color: rgba(0, 0, 0, 0.425);
+       padding: 10px;
+       border-radius: 10px;
+   }
+   
+   body {
+       background-image: url(Pictures/fons-1.jpg);
+       background-position: center center;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       background-color: aqua;
+   }
+   
+   .jumbotron {
+       opacity: 0.9;
+   }
